@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class='main-container'>
+        <h1>Calculater</h1>
+
+            <input type="text"  id='display' />
+
+        <div class="keypad">
+            <div class="keys">
+            <button class='cancle-btn' onclick="Cancle()">AC</button>
+            <button onclick="Del()">Del</button>
+            <button onclick="FindPercentage()" value="%" class='opt'>%</button>
+            </div>
+            <div class='keys'>
+            <button value="7" onclick="getValue(7)">7</button>
+            <button value="8" onclick="getValue(8)">8</button>
+            <button value="9" onclick="getValue(9)">9</button>
+            <button class='opt' value="+" onclick="getValue('+')">+</button>
+            </div>
+
+            <div class='keys'>
+            <button value="4" onclick="getValue(4)">4</button>
+            <button value="5" onclick="getValue(5)">5</button>
+            <button value="6" onclick="getValue(6)">6</button>
+            <button class='opt' value="-" onclick="getValue('-')">-</button>
+
+            </div>
+            
+            <div class='keys'>
+            <button value="1" onclick="getValue(1)">1</button>
+            <button value="2" onclick="getValue(2)">2</button>
+            <button value="3" onclick="getValue(3)">3</button>
+            <button value="*" onclick="getValue('X')" class='opt'>X</button>
+            </div>
+
+            <div class='keys'>
+            <button value="0" onclick="getValue(0)" >0</button>
+            <button value="." onclick="getValue('/')">.</button>
+            <button onclick="Solve()">=</button>
+            <button value="/" onclick="getValue('/')" class='opt'>/</button>
+
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script>
+
+    function getValue (val){
+        document.getElementById("display").value += val;
+    }
+
+    function Solve(){
+     let result = document.getElementById("display").value;
+     let a =eval(result);
+     document.getElementById("display").value = a;
+    
+    }
+
+    function Cancle (){
+        document.getElementById("display").value = "";
+    }
+
+    function Del(){
+     let value = document.getElementById("display").value;
+     let slice = value.slice(0,-1);
+     document.getElementById("display").value = slice;
+    }
+
+    function FindPercentage (){
+       let p = document.getElementById("display").value;
+        let percentage = parseFloat(p)/100;
+        document.getElementById("display").value = percentage;
+       
+    }
+</script>
+</html>

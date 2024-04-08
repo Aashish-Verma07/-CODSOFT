@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: lightblue;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.main-container{
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    background: rgb(43, 41, 41);
+    border-radius: 10px;
+    
+}
+
+
+
+.keys{
+    display: flex;
+    gap: 5px;
+}
+.main-container h1{
+    color: white;
+}
+
+.keys button{
+  width: 155px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 25px;
+  margin: 2px;
+  font-family: 'Orbitron', sans-serif;
+  
+}
+.keys button:hover{
+    background: gainsboro;
+}
+.keys button:active{
+   background: gray;
+}
+
+.cancle-btn{
+    background: red;
+}
+.cancle-btn:hover{
+    background:  rgb(248, 23, 23) !important;
+
+}
+.cancle-btn:active{
+   background: red !important;
+}
+
+.opt{
+    background: rgb(255, 208, 0);
+    font-weight: 500;
+}
+.opt:hover{
+   background: orange !important;
+}
+
+.opt:active{
+    background: rgb(255, 208, 0) !important ;
+}
+
+input{
+    width: 97%;
+    height: 50px;
+    font-size: 30px;
+    margin-bottom: 5px;
+} 
